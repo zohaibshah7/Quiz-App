@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(0,123,255,0.5), rgba(255,0,123,0.5));
+    backdrop-filter: blur(10px);
+}
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+#start-btn {
+  padding: 0.8em 1.8em;
+  border: 2px solid #17C3B2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17C3B2;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+    color: #111;
+}
+
+#start-btn:hover::before {
+    width: 105%;
+}
+
+#start-btn::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17C3B2;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+ #question-number, #timer {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#timer {
+  margin-top: 20px;
+}
+
+#question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+  background-color: rgb(255, 174, 0)!important;
+}
+
+#next-btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #17C3B2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#next-btn:hover {
+color: #ffc403;
+}
+
+.hidden {
+  display: none;
+}
+
+#result-box {
+   margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .quiz-container {
+    padding: 15px;
+  }
+  
+  .option-btn {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  #next-btn {
+    padding: 8px;
+  }
+}
